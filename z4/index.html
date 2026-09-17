@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        let klikniecia = 0
+
+        $('#div1').click(function () {
+            klikniecia = klikniecia + 1
+            $('#div1').text(klikniecia)
+            console.log('dadadada')
+        })
+
+
+        $('#naKoniec').click(function(){
+            let text = $('#produkt').val()
+
+            $('#lista').append("<li>" + text +"</li>").last().css('color', 'green')
+        })
+
+        $('#naPoczatek').click(function(){
+            let text = $('#produkt').val()
+
+            $('#lista').prepend("<li>" + text +"</li>").first().css('color', 'blue')
+        })
+    })
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+        0
+    </div>
+
+    <ul id="lista">
+  <li>Chleb</li>
+  <li>Mleko</li>
+</ul>
+<input type="text" id="produkt" placeholder="Nazwa produktu">
+<button id="naKoniec">Dodaj na koniec</button>
+<button id="naPoczatek">Dodaj na początek</button>
+</body>
+</html>
+<style>
+    #div1{
+        background-color: red;
+        height: 200px;
+        width: 200px;
+    }
+
+</style>
