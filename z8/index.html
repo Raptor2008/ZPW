@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#zmien').click(function(){
+                $('#tekst').text("Nowy tekst")
+            })
+
+            $('#przelacz').click(function(){
+                $('#pudelko').toggle()
+            })
+
+            $(".akapit").click(function(){
+                $(this).toggleClass('.podswietlony')
+            })
+
+
+            $('#przywitaj').click(function(){
+                let imie = $('#imie').val()
+                let text1 = "Czesc " + imie + " !"
+
+                $('#wynik').text(text1)
+            })
+
+            
+        })
+    </script>
+    <style>
+        .podswietlony{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="tekst">Stary tekst</p>
+    <button id="zmien">Zmien</button>
+
+    <div id="pudelko">Widzisz mnie</div>
+    <button id="przelacz">Pokaz/ukryj</button>
+
+    <p class="akapit">Kliknij mnie</p>
+
+    <input type="text" id="imie">
+    <button id="przywitaj">Przywitaj</button>
+    <p id="wynik"></p>
+</body>
+</html>

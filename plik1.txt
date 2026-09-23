@@ -1,7 +1,0 @@
-repozytorium = zbiór
-github = portal dysk internetowy
-commit = wysyłanie
-branch = gałąź
-Checkout = Przełączenie (lub Podgląd)
-Merge = Połączenie (lub Scalenie)
-Rebase = Przepisanie (lub Przesunięcie)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let suma = 0
+
+        $(document).ready(function (params) {
+            $('li').each(function(){
+                suma = suma + $(this).data("cena")
+            })
+
+            $('li').each(function(){
+                if($(this).data("cena") > 20){
+                    $(this).addClass('drogie');
+                }
+            })
+
+            $('#suma').text(suma);
+        })
+    </script>
+</head>
+
+<body>
+    <ul id="lista">
+        <li data-cena="10">Chleb</li>
+        <li data-cena="25">Ser</li>
+        <li data-cena="5">Woda</li>
+        <li data-cena="40">Szynka</li>
+    </ul>
+    <p id="suma"></p>
+</body>
+
+</html>
