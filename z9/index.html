@@ -7,57 +7,40 @@
         </script>
         <script>
             $(document).ready(function(){
-                ///Object event
-                // $(document).on("keydown keyup keypress", function(event){
-                //     $('#eventType').text(event.type)
-                // })
+                let marginv = 0
+                let marginh = 0
 
-                // $(document).on("mousemove", function(){
-                //     $('#pageX').text(event.pageX)
-                //     $('#pageY').text(event.pageY)
-                // })
-
-                let margin = 0
-                let positon = 0
-
-                $(document).on('keydown', function(event){
-                    if(event.key == 'd'){
-                        margin = margin + 100
-                        $('#kwadrat').css('margin-left', margin)
-                    }else if(event.key == 'a'){
-                        margin = margin - 100
-                        $('#kwadrat').css('margin-left', margin)
-                    }else if(event.key == 'w'){
-                        positon = positon - 200
-                        $('#kwadrat').css('margin-top', positon)
+                $(document).on('keypress keydown', function(){
+                    if(event.key == 'w'){
+                        marginh = marginh - 10
                     }else if(event.key == 's'){
-                        positon = positon + 200
-                        $('#kwadrat').css('margin-top', positon)
+                        marginh = marginh + 10
+                    }else if(event.key == 'a'){
+                        marginv = marginv - 10
+                    }else if(event.key == 'd'){
+                        marginv = marginv + 10
                     }
 
+                    $('#kwadrat').css('margin-top', marginh)
+                    $('#kwadrat').css('margin-left', marginv)
                 })
 
-                let posx = Math.floor((Math.random() * 500) + 1)
-                let posy = Math.floor((Math.random() * 500) + 1)
+                let japkov = Math.floor(Math.random() * 1000)
+                let japkoh = Math.floor(Math.random() * 1000)
+                
+                $('#japko').css('margin-top', japkov)
+                $('#japko').css('margin-left', japkoh)
 
-                $('#japko').css('margin-top', posx)
-                $('#japko').css('margin-left', posy)
 
-                let wkwadrat = 200
+                let japkokwv = marginh < japkov
 
-                if(margin == posx || positon == posy){
-                    $('#japko').css('background-color', 'rgba(172, 255, 47, 0.0)')
-                    wkwadrat = wkwadrat + 10
-                    $('#kawadrat').css('width', wkwadrat)
-                    $('#kawadrat').css('height', wkwadrat)
-                }
             })
         </script>
         <style>
             #kwadrat{
                 width: 200px;
                 height: 200px;
-                background-color: rgb(255, 0, 0);
+                background-color: rgba(255, 0, 0, 0.10);
                 position: absolute;
             }
 

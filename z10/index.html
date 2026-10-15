@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#odp').hide()
+
+            $('#dobrze').click(function(){
+                $('#pytanie1').css("background-color", 'green')
+            })
+
+            $('#zle').click(function(){
+                $('#pytanie2').css("background-color", 'red')
+                $('#odp').show()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>Pytanie 1: Czy Kasyna pozytywnie wpływają za ludzkie życie</p>
+
+    <div id="pytanie1">
+        <p>Fenomenalnie</p>
+        <input type="radio" id="dobrze">
+    </div>
+
+    <div id="pytanie2">
+        <p>Tylko Dobrze</p>
+        <input type="radio" id="zle">
+    </div>
+
+    <div id="odp">
+        Poprawna odpowidz to fenomnalnie gdyz tak
+    </div>
+</body>
+<style>
+    #pytanie1, #pytanie2{
+        width: 100px;
+        height: 50px;
+    }
+</style>
+
+</html>
