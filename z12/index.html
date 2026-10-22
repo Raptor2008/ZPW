@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#select').change(function(){
+                $('#info').text($(this).val())
+            })
+
+            $('#newsletter').change(function(){
+                if($(this).is(":checked")){
+                    $('#info2').text("wpisano do newslettera")
+                }else{
+                    $('#info2').text("Nie wpisano do newslettera")
+                }
+            })
+
+            $('#regulamin').change(function(){
+                if($(this).is(':checked')){
+                    $('#button1').prop('disabled', false)
+                }else{
+                   $('#button1').prop('disabled', true) 
+                }
+            })
+
+            $('#text1').on('input', function(){
+                $('#text').text($(this).val())
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <select name="select1" id="select">
+        <option value="mala (20 zl)">mala (20 zl)</option>
+        <option value="srednia (30 zl)">srednia (30 zl)</option>
+        <option value="duza (40 zl)">duza (40 zl)</option>
+    </select>
+    <p id="info"></p>
+    
+
+    <input type="checkbox" id="newsletter"> Chce new letter
+    <p id="info2"></p>
+
+    <input type="checkbox" id="regulamin"> Akceptuje regulamin
+    <br>
+    <input type="text" id="text1">
+    <p id="text"></p>
+    <br>
+    <button disabled="true" id="button1">Zarejstruj</button>
+</body>
+</html>

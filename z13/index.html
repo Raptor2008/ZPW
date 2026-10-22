@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#b1').click(function () {
+                let imie = $("#imie").val()
+                if (imie == "") {
+                    $('#blad').text("Puste pole")
+                } else {
+                    $('#blad').text("twoje imie to: " + imie)
+                }
+
+                let nazwisko = $('$nazwisko').val()
+                if(nazwisko == ""){
+                    $('#blad').text("Puste pole")
+                }else if(nazwiko == " "){
+                    $('#blad').text("Spacje")
+                }
+            })
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="imie">
+    <input type="text" id="nazwisko">
+    <button id="b1">Sprawdz</button>
+    <p id="blad"></p>
+</body>
+<style>
+</style>
+
+</html>
